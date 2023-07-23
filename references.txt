@@ -1,0 +1,2 @@
+Cheerio Function Deprecation
+https://javascript.plainenglish.io/how-to-deal-with-cheerios-load-function-deprecation-a6401da930d1

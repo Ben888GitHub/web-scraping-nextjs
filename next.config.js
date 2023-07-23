@@ -1,6 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+	reactStrictMode: true,
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: '**'
+			}
+		],
+		domains: [
+			'scontent-iad3-1.cdninstagram.com',
+			'cdninstagram.com',
+			'scontent.cdninstagram.com'
+		]
+	},
+	output: 'standalone'
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
