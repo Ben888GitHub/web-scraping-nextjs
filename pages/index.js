@@ -41,13 +41,15 @@ export default function Home() {
 		<main
 			className={`flex  flex-col items-center justify-between p-16 ${inter.className}`}
 		>
-			<p className="text-4xl mb-10">Web Scraping NextJS</p>
+			<p className="text-2xl md:text-4xl lg:text-4xl mb-10">
+				Scrape Instagram Profile with NextJS
+			</p>
 			<div className="flex">
 				<input
 					type="text"
 					value={username}
 					onChange={handleSetUsername}
-					placeholder="Search IG Profile"
+					placeholder="Search IG Username"
 					className="p-3 border-2 border-gray-300 rounded-md"
 				/>
 				<button

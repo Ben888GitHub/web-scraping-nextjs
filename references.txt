@@ -1,2 +1,8 @@
 Cheerio Function Deprecation
 https://javascript.plainenglish.io/how-to-deal-with-cheerios-load-function-deprecation-a6401da930d1
+
+Cheerio references:
+Scrape twitter profile - https://dev.to/mtliendo/create-a-public-api-by-web-scraping-in-nextjs-2f5n
+Scrape sample website - https://javascript.plainenglish.io/cheerio-script-for-turning-html-pages-into-json-files-8e9363106904
+Scrape sample website - https://www.manuelkruisz.com/blog/posts/web-scraping-nextjs
+Another example - https://sayanbiswas.in/posts/building-a-web-scraper-with-nextjs-api-routes-and-cheerio-on-vercel/
