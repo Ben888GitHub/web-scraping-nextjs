@@ -19,10 +19,10 @@ const handler = async (req, res) => {
 			);
 			// console.log(data);
 			const $ = await load(data);
-			const scriptTags = await $('script[type="application/ld+json"]');
-			console.log(scriptTags);
-			console.log(scriptTags.length);
-			console.log(scriptTags.text);
+			const scriptTags = await $('script[type="application/ld+json"]').html();
+			// console.log(scriptTags);
+			// console.log(scriptTags.length);
+			// console.log(scriptTags.text);
 
 			// scriptTags.each((index, element) => {
 			// 	const jsonData = JSON.parse($(element).html());
@@ -31,9 +31,11 @@ const handler = async (req, res) => {
 
 			// console.log(jsonDataArr);
 
-			console.log(scriptTags?.html());
-			const jsonData = await JSON.parse(scriptTags?.html());
-
+			// todo, uncomment this
+			// console.log(scriptTags?.html());
+			// const jsonData = await JSON.parse(scriptTags?.html());
+			console.log(scriptTags);
+			const jsonData = await JSON.parse(scriptTags);
 			// console.log(jsonData);
 
 			res.setHeader('Content-Type', 'application/json');
