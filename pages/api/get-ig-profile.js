@@ -24,15 +24,15 @@ const handler = async (req, res) => {
 			console.log(scriptTags.length);
 			console.log(scriptTags.text);
 
-			scriptTags.each((index, element) => {
-				const jsonData = JSON.parse($(element).html());
-				jsonDataArr.push(jsonData);
-			});
+			// scriptTags.each((index, element) => {
+			// 	const jsonData = JSON.parse($(element).html());
+			// 	jsonDataArr.push(jsonData);
+			// });
 
-			console.log(jsonDataArr);
+			// console.log(jsonDataArr);
 
-			// console.log(scriptTags.html());
-			const jsonData = await JSON.parse(scriptTags.html());
+			console.log(scriptTags?.html());
+			const jsonData = await JSON.parse(scriptTags?.html());
 
 			// console.log(jsonData);
 
