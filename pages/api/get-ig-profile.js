@@ -11,9 +11,10 @@ const handler = async (req, res) => {
 			const { data } = await axios.get(
 				`https://www.instagram.com/${req.body.username}/`
 			);
-			console.log(data);
+			// console.log(data);
 			const $ = await load(data);
 			const scriptTags = await $('script[type="application/ld+json"]');
+			console.log(scriptTags);
 			const jsonData = await JSON.parse(scriptTags.html());
 
 			console.log(jsonData);
