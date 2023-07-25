@@ -6,3 +6,4 @@ Scrape twitter profile - https://dev.to/mtliendo/create-a-public-api-by-web-scra
 Scrape sample website - https://javascript.plainenglish.io/cheerio-script-for-turning-html-pages-into-json-files-8e9363106904
 Scrape sample website - https://www.manuelkruisz.com/blog/posts/web-scraping-nextjs
 Another example - https://sayanbiswas.in/posts/building-a-web-scraper-with-nextjs-api-routes-and-cheerio-on-vercel/
+Twitter example - https://dev.to/mtliendo/create-a-public-api-by-web-scraping-in-nextjs-2f5n

@@ -21,13 +21,14 @@ export default function Home() {
 		setLoading(true);
 
 		try {
-			const { data } = await axios.post(`/api/get-ig-profile`, {
+			const res = await axios.post(`/api/get-ig-profile`, {
 				username: username
 			});
 			setLoading(false);
-			console.log(data);
-			if (data) {
-				setProfile((currProfile) => ({ ...currProfile, username: data }));
+			console.log(res);
+			console.log(res.data);
+			if (res.data) {
+				setProfile((currProfile) => ({ ...currProfile, username: res.data }));
 				// console.log(data);
 			} else {
 				alert('User not found');
