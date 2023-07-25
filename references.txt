@@ -1,3 +1,7 @@
+Cheerio Docs
+- https://cheerio.js.org/docs/intro
+- https://cheerio.js.org/docs/api
+
 Cheerio Function Deprecation
 https://javascript.plainenglish.io/how-to-deal-with-cheerios-load-function-deprecation-a6401da930d1
 
@@ -7,3 +11,4 @@ Scrape sample website - https://javascript.plainenglish.io/cheerio-script-for-tu
 Scrape sample website - https://www.manuelkruisz.com/blog/posts/web-scraping-nextjs
 Another example - https://sayanbiswas.in/posts/building-a-web-scraper-with-nextjs-api-routes-and-cheerio-on-vercel/
 Twitter example - https://dev.to/mtliendo/create-a-public-api-by-web-scraping-in-nextjs-2f5n
+CORS Implementation - https://blog.logrocket.com/using-cors-next-js-handle-cross-origin-requests/

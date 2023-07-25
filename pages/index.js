@@ -21,7 +21,7 @@ export default function Home() {
 		setLoading(true);
 
 		try {
-			const res = await axios.post(`/api/get-ig-profile`, {
+			const res = await axios.post(`/api/fetch-ig-profile/`, {
 				username: username
 			});
 			setLoading(false);
