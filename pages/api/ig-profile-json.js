@@ -6,7 +6,7 @@ const handler = async (req, res) => {
 	await axios.get(`https://www.instagram.com/fbi/`).then(({ data }) => {
 		const $ = load(data);
 		const scriptTag = $('script[type="application/ld+json"]');
-		console.log(scriptTag);
+		scriptTag && console.log(scriptTag.html());
 	});
 
 	res.status(200).json({ name: 'John Doe' });
