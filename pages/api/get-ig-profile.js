@@ -20,10 +20,13 @@ const handler = async (req, res) => {
 			// console.log(data);
 			const $ = await load(data);
 			const scriptTags = await $('script[type="application/ld+json"]');
+			console.log(scriptTags);
 			console.log(scriptTags.html());
 			const jsonData = await JSON.parse(scriptTags.html());
 
 			console.log(jsonData);
+
+			res.setHeader('Content-Type', 'application/json');
 			res.status(200).json(jsonData);
 		} catch (err) {
 			console.error('Error fetching Instagram profile:', error.message);
