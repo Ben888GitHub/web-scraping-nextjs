@@ -21,7 +21,7 @@ export default function Home() {
 		setLoading(true);
 
 		try {
-			const { data } = await axios.post(`/api/scrape-with-cheerio/`, {
+			const { data } = await axios.post(`/api/get-ig-profile`, {
 				username: username
 			});
 			setLoading(false);
