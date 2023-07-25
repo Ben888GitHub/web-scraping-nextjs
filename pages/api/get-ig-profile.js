@@ -13,8 +13,8 @@ const handler = async (req, res) => {
 			);
 			console.log(data);
 			const $ = await load(data);
-			const scriptTags = $('script[type="application/ld+json"]');
-			const jsonData = JSON.parse(scriptTags.html());
+			const scriptTags = await $('script[type="application/ld+json"]');
+			const jsonData = await JSON.parse(scriptTags.html());
 
 			console.log(jsonData);
 			res.status(200).json(jsonData);
