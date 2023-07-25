@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { load } from 'cheerio';
-
+const jsonDataArr = [];
 const handler = async (req, res) => {
 	if (req.method === 'POST') {
 		const { username } = req.body;
@@ -21,10 +21,20 @@ const handler = async (req, res) => {
 			const $ = await load(data);
 			const scriptTags = await $('script[type="application/ld+json"]');
 			console.log(scriptTags);
-			console.log(scriptTags.html());
+			console.log(scriptTags.length);
+			console.log(scriptTags.text);
+
+			scriptTags.each((index, element) => {
+				const jsonData = JSON.parse($(element).html());
+				jsonDataArr.push(jsonData);
+			});
+
+			console.log(jsonDataArr);
+
+			// console.log(scriptTags.html());
 			const jsonData = await JSON.parse(scriptTags.html());
 
-			console.log(jsonData);
+			// console.log(jsonData);
 
 			res.setHeader('Content-Type', 'application/json');
 			res.status(200).json(jsonData);
