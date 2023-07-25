@@ -14,7 +14,7 @@ const handler = async (req, res) => {
 			// console.log(data);
 			const $ = await load(data);
 			const scriptTags = await $('script[type="application/ld+json"]');
-			console.log(scriptTags);
+			console.log(scriptTags.html());
 			const jsonData = await JSON.parse(scriptTags.html());
 
 			console.log(jsonData);
