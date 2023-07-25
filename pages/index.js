@@ -21,7 +21,9 @@ export default function Home() {
 		setLoading(true);
 
 		try {
-			const { data } = await axios.get(`/api/scrape-with-cheerio/${username}`);
+			const { data } = await axios.post(`/api/scrape-with-cheerio/`, {
+				username: username
+			});
 			setLoading(false);
 			if (data) {
 				setProfile((currProfile) => ({ ...currProfile, username: data }));
@@ -49,7 +51,7 @@ export default function Home() {
 					type="text"
 					value={username}
 					onChange={handleSetUsername}
-					placeholder="Search IG Username"
+					placeholder="Search IG User"
 					className="p-3 border-2 border-gray-300 rounded-md"
 				/>
 				<button

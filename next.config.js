@@ -11,7 +11,8 @@ const nextConfig = {
 		domains: [
 			'scontent-iad3-1.cdninstagram.com',
 			'cdninstagram.com',
-			'scontent.cdninstagram.com'
+			'scontent.cdninstagram.com',
+			'scontent-lax3-1.cdninstagram.com'
 		]
 	},
 	output: 'standalone'
