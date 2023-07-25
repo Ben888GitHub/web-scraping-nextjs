@@ -25,9 +25,10 @@ export default function Home() {
 				username: username
 			});
 			setLoading(false);
+			console.log(data);
 			if (data) {
 				setProfile((currProfile) => ({ ...currProfile, username: data }));
-				console.log(data);
+				// console.log(data);
 			} else {
 				alert('User not found');
 				setProfile({});
