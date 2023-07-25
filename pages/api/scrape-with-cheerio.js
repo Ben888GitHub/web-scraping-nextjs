@@ -2,6 +2,14 @@ import axios from 'axios';
 import { load } from 'cheerio';
 
 const handler = async (req, res) => {
+	res.setHeader('Access-Control-Allow-Credentials', true);
+	res.setHeader('Access-Control-Allow-Origin', '*'); // replace this your actual origin
+	res.setHeader('Access-Control-Allow-Methods', 'GET,DELETE,PATCH,POST,PUT');
+	res.setHeader(
+		'Access-Control-Allow-Headers',
+		'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+	);
+
 	const { username } = req.body;
 
 	console.log(username);
@@ -10,7 +18,7 @@ const handler = async (req, res) => {
 			`https://www.instagram.com/${req.body.username}/`
 		);
 
-		const $ = load(data);
+		const $ = await load(data);
 		const scriptTags = $('script[type="application/ld+json"]');
 		const jsonData = JSON.parse(scriptTags.html());
 
